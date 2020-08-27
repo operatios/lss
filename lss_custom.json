@@ -1,0 +1,32 @@
+// Remove all comments when you create your own lss_custom.json
+{
+    "categories": {
+        // Values are in format:
+        // [foreground_color, background_color, [*attributes]]
+        // Color can either be an ANSI color string: 'red', 'blue' or RGB [255, 0, 0]
+        // Attributes are: bold, dim, italic, underline, blink, reverse, hidden
+        "file": ["green"],
+        "directory": [[64, 128, 255], null, ["bold"]],
+        "symlink": ["cyan", null, ["underline"]],
+        "reparse_point": ["black", "cyan", ["underline"]],
+        "broken_link": ["black", "red"],
+        "archive": ["red"],
+        "executable": ["red", null, ["bold"]],
+        "code": ["magenta"],
+        "image": ["yellow"],
+        "video": ["yellow", null, ["bold"]],
+        "audio": ["yellow"]
+    },
+    "size": {
+        // Files larger or equal to 2GiB will be colored in end_color
+        "maxsize": 2073741824,
+
+        // Percentages of maxsize, amount of steps in gradient
+        // When the filesize exceeds the threshold, it will be colored in next gradient color
+        "thresholds": [0.0625, 0.125, 0.1875, 0.25, 0.375, 0.5, 0.75, 1],
+
+        // Unlike category colors, these must be in hex format
+        "start_color": "#63c74d",
+        "end_color": "#ff0044"
+    }
+}
