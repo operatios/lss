@@ -1,8 +1,7 @@
 // Remove all comments when you create your own lss_custom.json
 {
     "categories": {
-        // Values are in format:
-        // [foreground_color, background_color, [*attributes]]
+        // Values are in format: [foreground_color, background_color, [*attributes]]
         // Color can either be an ANSI color string: 'red', 'blue' or RGB [255, 0, 0]
         // Attributes are: bold, dim, italic, underline, blink, reverse, hidden
         "file": ["green"],
